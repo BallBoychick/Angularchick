@@ -1,6 +1,14 @@
 export class Hero {
-    id: number=1;
-    name: string="yes";
+    id: number;
+    name: string;
+
+    constructor (heroid: number, heroname: string) {
+      this.id = heroid;
+      this.name = heroname;
+    }
   }
 
-  //maybe do contructor
+// export interface Hero {
+//   id: number;
+//   name: string;
+// }
