@@ -1,0 +1,19 @@
+.message__btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #607D8B;
+    padding: 15px 30px;
+}
+
+.message__btn:hover {
+    cursor: pointer;
+}
+
+.message__btn-text {
+    color: #000;
+    font-size: 15px;
+}
+
+.message__view {
+    padding-top: 20px;
+}
