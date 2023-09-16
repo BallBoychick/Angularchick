@@ -2,7 +2,7 @@
     border: none;
     border-radius: 5px;
     background-color: #607D8B;
-    padding: 15px 30px;
+    padding: 15px 50px;
 }
 
 .message__btn:hover {
@@ -11,7 +11,7 @@
 
 .message__btn-text {
     color: #000;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .message__view {
