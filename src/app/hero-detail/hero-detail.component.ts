@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -17,6 +17,7 @@ export class HeroDetailComponent implements OnInit{
     private heroService: HeroService,
     private location: Location
   ) {}
+ 
   hero: Hero | undefined;
 
   ngOnInit(): void {
@@ -34,8 +35,11 @@ export class HeroDetailComponent implements OnInit{
   }
 
   save(): void {
-    this.heroService.updateHero(this.hero!)
+  this.subject =   this.heroService.updateHero(this.hero!).pipe(tape(res=>{
+    this.goBack()
+  }))
       .subscribe(() => this.goBack());
+    
   }
   
 }

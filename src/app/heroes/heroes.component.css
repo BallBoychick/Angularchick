@@ -1,4 +1,9 @@
 /* HeroesComponent's private CSS styles */
+.hores__menu {
+  background-image: url("../img/background_hero_img.jpg");
+  background-size: cover;
+}
+
 .heroes {
   margin: 0 0 2em 0;
   list-style-type: none;
