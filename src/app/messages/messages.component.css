@@ -1,11 +1,18 @@
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
 .message__btn {
     border: none;
     border-radius: 5px;
-    background-color: #607D8B;
+    background-color: yellow;
     padding: 15px 50px;
+    font-weight: bold;
 }
 
 .message__btn:hover {
+    background-color: rgb(190, 190, 22);
     cursor: pointer;
 }
 
@@ -15,5 +22,7 @@
 }
 
 .message__view {
+    color: white;
+    font-weight: bold;
     padding-top: 20px;
 }

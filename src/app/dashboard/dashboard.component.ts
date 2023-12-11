@@ -8,9 +8,12 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
+  ImagePath!: string;
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {
+    this.ImagePath = "D:/Angular/angular-tour-of-heroes/src/app/img/background_hero_img.jpg";
+   }
 
   ngOnInit() {
     this.getHeroes();
@@ -18,6 +21,6 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
   }
-}
+} 

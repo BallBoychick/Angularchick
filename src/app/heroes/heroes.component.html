@@ -1,12 +1,12 @@
 <h2>My Heroes</h2>
 <section class="hores__menu">
   <div>
-    <label>Hero name:
-      <input #heroName />
+    <label class="hores__name">Hero name:
+      <input #heroName class="hores__input"/>
     </label>
     <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="add(heroName.value); heroName.value=''">
-      add
+    <button (click)="add(heroName.value); heroName.value=''" class="hores__button">
+      Add
     </button>
   </div>
 

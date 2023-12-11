@@ -3,20 +3,34 @@ label {
     display: inline-block;
     width: 3em;
     margin: .5em 0;
-    color: #607D8B;
+    color: white;
     font-weight: bold;
   }
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
   input {
+    color: white;
+    font-weight: bold;
     height: 2em;
     font-size: 1em;
     padding-left: .4em;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 4px;
   }
   button {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
     margin-top: 20px;
     font-family: Arial;
-    background-color: #eee;
+    background-color: yellow;
     border: none;
-    padding: 5px 10px;
+    padding: 15px 62px;
     border-radius: 4px;
     cursor: pointer;
     cursor: hand;
@@ -29,3 +43,8 @@ label {
     color: #ccc;
     cursor: auto;
   }
+
+.hero__id {
+  color: white;
+  font-weight: bold;
+}

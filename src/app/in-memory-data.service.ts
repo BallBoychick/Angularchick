@@ -8,16 +8,14 @@ import { Injectable } from '@angular/core';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 1, name: 'ANAKIN SKYWALKER',  img: 'assets/img/anakin-skywalker-main_23e5105b.jpeg'},
+      { id: 2, name: 'PADMÉ AMIDALA',  img: 'assets/img/Padme-Amidala_05d50c8a.jpeg'},
+      { id: 3, name: 'OBI-WAN KENOBI', img: 'assets/img/obi_wan.jpeg' },
+      { id: 4, name: 'Darth-Maul', img: 'assets/img/Darth-Maul_632eb5af.jpeg' },
+      { id: 5, name: 'Mace-Windu', img: 'assets/img/Mace-Windu_b35242e5.jpeg' },
+      { id: 6, name: 'jangofett', img: 'assets/img/databank_jangofett_01_169_884cefab.jpeg' },
+      { id: 7, name: 'jarjarbinks',  img: 'assets/img/databank_jarjarbinks_01_169_c70767ab.jpeg'},
+      { id: 8, name: 'Yoda', img: 'assets/img/Yoda-Retina_2a7ecc26.jpeg' }  
     ];
     return {heroes};
   }

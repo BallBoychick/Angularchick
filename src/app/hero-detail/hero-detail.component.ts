@@ -34,12 +34,12 @@ export class HeroDetailComponent implements OnInit{
     this.location.back();
   }
 
-  save(): void {
-  this.subject =   this.heroService.updateHero(this.hero!).pipe(tape(res=>{
-    this.goBack()
-  }))
-      .subscribe(() => this.goBack());
+  // save(): void {
+  // this.subject =   this.heroService.updateHero(this.hero!).pipe(tape(res=>{
+  //   this.goBack()
+  // }))
+  //     .subscribe(() => this.goBack());
     
-  }
+  // }
   
 }

@@ -1,6 +1,7 @@
 export class Hero {
     id?: number;
     name?: string;
+    img?: string;
 
     // constructor (heroid: number, heroname: string) {
     //   this.id = heroid;
