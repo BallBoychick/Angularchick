@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { HeroService }  from '../hero.service';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'app-hero-detail',
@@ -15,19 +16,19 @@ export class HeroDetailComponent implements OnInit{
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
-    private location: Location
+    private location: Location,
+    private changeDetectorRef: ChangeDetectorRef
   ) {}
- 
-  hero: Hero | undefined;
+  // hero: Hero | undefined;
+  hero$!: Observable<Hero | undefined>;
 
   ngOnInit(): void {
-    this.getHero();
+    this.hero$ = this.getHero();
   }
   
-  getHero(): void {
+  getHero(): Observable<Hero | undefined> {
     const id = +this.route.snapshot.paramMap.get('id')!;
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero)!;
+    return this.heroService.getHero(id);
   }
 
   goBack(): void {
@@ -35,11 +36,32 @@ export class HeroDetailComponent implements OnInit{
   }
 
   // save(): void {
-  // this.subject =   this.heroService.updateHero(this.hero!).pipe(tape(res=>{
-  //   this.goBack()
-  // }))
-  //     .subscribe(() => this.goBack());
-    
+  //   this.hero$.subscribe(hero => {
+  //     if (hero) {
+  //       this.heroService.updateHero(hero)
+  //         .pipe(
+  //           tap(() => {
+  //             this.goBack();
+  //             this.changeDetectorRef.detectChanges();
+  //           })
+  //         )
+  //         .subscribe();
+  //     }
+  //   });
   // }
-  
+  // save(): void {
+  //   this.hero$.subscribe(hero => {
+  //     if (hero) {
+  //       const updatedHero: Hero = { ...hero, name: this.hero.name };
+  //       this.heroService.updateHero(updatedHero)
+  //         .pipe(
+  //           tap(() => {
+  //             this.goBack();
+  //             this.changeDetectorRef.detectChanges();
+  //           })
+  //         )
+  //         .subscribe();
+  //     }
+  //   });
+  // }
 }
